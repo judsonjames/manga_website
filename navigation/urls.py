@@ -5,5 +5,5 @@ from .views import MangaView
 
 urlpatterns = [
   path('', MainPage.as_view()),
-  path('manga/<str:manga_name>/<int:manga_page>/', MangaView.as_view()),
+  path('manga/<slug:title>/<int:chapter_number>/<int:manga_page>/', MangaView.as_view()),
 ]

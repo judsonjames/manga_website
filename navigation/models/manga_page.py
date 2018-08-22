@@ -8,4 +8,4 @@ class MangaPage(models.Model):
 
 
     def __str__(self) -> str:
-        return ""
+        return "Page {}, {}".format(self.order, self.chapter)
