@@ -1,0 +1,6 @@
+title, Bless Your Heart
+author, Catherine Hill Hyman
+artist, Catherine Hill Hyman
+semester, spring 2017
+cover, true
+type, jpg
