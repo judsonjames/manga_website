@@ -10,13 +10,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
       margin-bottom: 50px;
       border-radius: 0;
     }
-    
-    /* Remove the jumbotron's default bottom margin */ 
+
+    /* Remove the jumbotron's default bottom margin */
      .jumbotron {
        position: relative;
        background: url({% static 'img/scroll-bg.jpg' %}) repeat scroll 50% 100% rgba(0,0,0,0);
@@ -34,7 +34,7 @@
       100%  { background-position: 0 -760px; }
 
     }
-   
+
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
@@ -75,14 +75,14 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#"><img style="height: 200%; margin-top: -8%;" src="{% static 'img/wmm.png' %}"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Browse Manga</a></li>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/manga">Browse Manga</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact</a></li>
@@ -98,7 +98,7 @@
 {% endblock %}
 
 <footer class="container-fluid text-center">
-  <p><u>Contact Us</u></p>  
+  <p><u>Contact Us</u></p>
   <form class="form-inline">
 WeMakeManga<br>
 University of South Carolina<br>
@@ -109,4 +109,3 @@ wemakemanga@gmail.com<br>
 
 </body>
 </html>
-
