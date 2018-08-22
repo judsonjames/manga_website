@@ -1,0 +1,13 @@
+{% load static %}
+<html>
+  <head>
+  </head>
+  <body>
+    <p>List of Pages</p>
+    <ul>
+    {% for p in pages %}
+      <li><a href="/manga/{{title}}/{{chapter}}/{{p.order}}">{{p}}</a></li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>

@@ -8,4 +8,4 @@ class MangaChapter(models.Model):
 
 
     def __str__(self) -> str:
-        return "{}, {}".format(self.manga.name, self.title)
+        return "{}, {}".format(self.manga.title, self.title)

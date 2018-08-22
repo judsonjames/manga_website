@@ -3,12 +3,13 @@ from django.contrib.auth.models import User
 
 class Manga(models.Model):
     title = models.CharField(max_length=50, blank=False, null=False)
+    url_name = models.CharField(max_length=50, blank=False, null=False, default="?")
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
     genres = models.ManyToManyField('Genre')
     tags = models.ManyToManyField('Tag')
 
     def __str__(self) -> str:
-        return "{}".format(self.name)
+        return "{}".format(self.title)
 
 class Genre(models.Model):
     title = models.CharField(max_length=10)
