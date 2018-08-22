@@ -4,6 +4,6 @@ from django.views import View
 
 class MainPage(View):
     def get(self, request: dict) -> HttpResponse:
-        return HttpResponse("Main Page Goes Here")
+        return render(request, 'base.html')
     def post(self, request: dict) -> HttpResponse:
         return HttpResponse("Main Page Goes Here")
