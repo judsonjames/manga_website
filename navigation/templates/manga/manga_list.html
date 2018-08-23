@@ -56,24 +56,15 @@
   </head>
   <body>
     <div class="container">
-
-      <p>List of Manga</p>
-      <ul>
-      {% for m in manga %}
-        <li><a href="/manga/{{m.url_name}}">{{m.title}}</a></li>
-      {% endfor %}
-      </ul>
+      <h1 style="text-align:center">Pick a Manga</h1>
       <div style="overflow: hidden; width: 100%;">
         <div class="variable-width" id="carousel">
-          <img width=200px src="{% static 'img/Cover.jpg' %}">
-          <img width=200px src="{% static 'img/wmm.png' %}">
-          <img width=200px src="{% static 'img/scroll-bg.jpg' %}">
+          {% for m in manga %}
+          <a href="/manga/{{m.url_name}}"><img width=200px src="{% static '' %}{{m.cover}}"></a>
+          {% endfor %}
         </div>
       </div>
     </div>
-
-
-
   </body>
 </html>
 {% endblock %}

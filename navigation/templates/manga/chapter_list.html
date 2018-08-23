@@ -8,12 +8,12 @@
   <head>
   </head>
   <body>
-    <p>List of Chapters</p>
-    <ul>
+    <h1 style="text-align:center;">Pick a Chapter</h1>
     {% for c in chapters %}
-      <li><a href="/manga/{{title}}/{{c.order}}">{{c.title}}</a></li>
+      <p style="text-align:center;">
+        <a href="/manga/{{title}}/{{c.order}}">{{c.title}}</a>
+      </p>
     {% endfor %}
-    </ul>
   </body>
 </html>
 {% endblock %}

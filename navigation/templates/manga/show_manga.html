@@ -7,30 +7,28 @@
   <head>
   </head>
   <body>
-    <p><a href="/">Home</a></p>
-    <!-- <p>Manga Page</p> -->
     <img src="{% static '' %}{{page.image_link}}"
-     style="height:75%;width:50%;position:relative;left:25%;"
+     style="height:50%;width:50%;position:relative;left:25%;"
      >
-    {% if last_chapter == False %}
-    <p>
-      <a href="/manga/{{title}}/{{chapter}}/{{next}}">
-        Next Page
-      </a>
-    </p>
-    {% endif %}
-    {% if first_chapter == False %}
-    <p>
-      <a href="/manga/{{title}}/{{chapter}}/{{prev}}">
-        Last Page
-      </a>
-    </p>
-    {% endif %}
-    <p>
-      <a href="/manga/{{title}}">
-        List of Chapters
-      </a>
-    </p>
+     {% if first_chapter == False %}
+     <p style="text-align:center;">
+       <a href="/manga/{{title}}/{{chapter}}/{{prev}}">
+         Last Page
+       </a>
+     </p><br>
+     {% endif %}
+     {% if last_chapter == False %}
+     <p style="text-align:center;">
+       <a href="/manga/{{title}}/{{chapter}}/{{next}}">
+         Next Page
+       </a>
+     </p><br>
+     {% endif %}
+     <p style="text-align:center;">
+       <a href="/manga/{{title}}">
+         List of Chapters
+       </a>
+     </p><br>
   </body>
 </html>
 {% endblock %}

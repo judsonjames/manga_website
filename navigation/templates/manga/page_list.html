@@ -7,10 +7,11 @@
   <head>
   </head>
   <body>
-    <p>List of Pages</p>
-    <ul>
+    <h1 style="text-align:center;">Pick a Page</h1>
     {% for p in pages %}
-      <li><a href="/manga/{{title}}/{{chapter}}/{{p.order}}">{{p}}</a></li>
+      <p style="text-align:center;">
+        <a href="/manga/{{title}}/{{chapter}}/{{p.order}}">{{p}}</a>
+      </p>
     {% endfor %}
     </ul>
   </body>
