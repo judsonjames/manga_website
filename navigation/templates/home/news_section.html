@@ -1,0 +1,12 @@
+{% load static %}
+<html>
+  <head>
+  </head>
+  <body>
+    {% for p in posts %}
+      <h2>{{p.title}}</h2>
+      <h3>{{p.date}}</h3>
+      <p>{{p.post}}<p>
+    {% endfor %}
+  </body>
+</html>
