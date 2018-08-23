@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- slick is courtesy of http://kenwheeler.github.io/slick/ -->
+  <link rel="stylesheet" type="text/css" src="%{ static 'slick-1.8.1/slick/slick.css' %}"/>
+  <link rel="stylesheet" type="text/css" src="%{ static 'slick-1.8.1/slick/slick-theme.css' %}"/>
+		
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="{% static 'slick-1.8.1/slick/slick.min.js' %}"></script>		
+
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */
     .navbar {
@@ -55,11 +63,11 @@
     }
 
     .navbar-inverse .navbar-nav>li>a {
-    color: #fff;
+      color: #fff;
     }
 
     .navbar-inverse .navbar-nav>li>a:hover {
-    color: #000;
+      color: #000;
     }
 
   </style>
@@ -85,7 +93,6 @@
         <li><a href="/manga">Browse Manga</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Admin portal</a></li>
@@ -106,6 +113,17 @@ Columbia, SC 29225<br>
 wemakemanga@gmail.com<br>
   </form>
 </footer>
+
+<script type="text/javascript">
+$('.variable-width').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true
+});
+</script>
 
 </body>
 </html>
