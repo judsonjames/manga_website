@@ -56,9 +56,10 @@
   </head>
   <body>
     <div class="container">
-      <h1 style="text-align:center">Pick a Manga</h1>
+      <h1 style="text-align:center;">Pick a Manga</h1>
       <div style="overflow: hidden; width: 100%;">
         <div class="variable-width" id="carousel">
+          <!-- <img width=200px src="{% static 'img/wmm.png' %}"> -->
           {% for m in manga %}
           <a href="/manga/{{m.url_name}}"><img width=200px src="{% static '' %}{{m.cover}}"></a>
           {% endfor %}
