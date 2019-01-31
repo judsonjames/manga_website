@@ -5,7 +5,7 @@ class Manga(models.Model):
     title = models.CharField(max_length=50, blank=False, null=False)
     url_name = models.CharField(max_length=50, blank=False, null=False, default="?")
     cover = models.CharField(max_length=50, default="")
-    author = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
+    author = models.ManyToManyField('Author')
     genres = models.ManyToManyField('Genre')
     tags = models.ManyToManyField('Tag')
 
@@ -23,3 +23,9 @@ class Tag(models.Model):
 
     def __str__(self) -> str:
         return self.title
+
+class Author(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self) -> str:
+        return self.name
